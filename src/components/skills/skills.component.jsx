@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Skills = (props) => {
-    const items = props.skills.map(el => {
+    const items = props.skills.map((el,index) => {
         return (
-        <li class="double">{el}</li>
+        <li key={index} class="double">{el}</li>
     )});
     
     return (
