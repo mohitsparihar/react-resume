@@ -51,14 +51,14 @@ class App extends React.Component {
     }
     return (
       <section className="App" id="content">
-      <Header resume={this.state.resume} />
-      <Objective objective={this.state.resume.objective} />
-      <Summary summary={this.state.resume.executiveSummary} />
-      <Skills skills={this.state.resume.skills}/>
-      <Projects projects={this.state.resume.projects} />
-      <Experience experience={this.state.resume.experience} />
-      <PersonalProjects personalProjects={this.state.resume.personalProjects} />
-      <Education education={this.state.resume.education} />
+      { this.state.resume && <Header resume={this.state.resume} />}
+      { this.state.resume.objective && <Objective objective={this.state.resume.objective} />}
+      { this.state.resume.executiveSummary && <Summary summary={this.state.resume.executiveSummary} />}
+      { this.state.resume.skills && <Skills skills={this.state.resume.skills}/>}
+      {this.state.resume.projects && <Projects projects={this.state.resume.projects} />}
+      {this.state.resume.experience && <Experience experience={this.state.resume.experience} />}
+      {this.state.resume.personalProjects && <PersonalProjects personalProjects={this.state.resume.personalProjects} />}
+      {this.state.resume.education && <Education education={this.state.resume.education} />}
     </section>
     );
   }
