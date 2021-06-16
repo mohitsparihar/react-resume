@@ -10,10 +10,10 @@ const Projects = (props) => {
                             <div class="label">Title:</div>
                             <div class="content">{el.title}</div>
                         </li>
-                        <li>
+                        { el.technologies && <li>
                             <div class="label">Technologies:</div>
                             <div class="content">{el.technologies}</div>
-                        </li>
+                        </li>}
                         <li>
                             <div class="label">Description:</div>
                             <div class="content">{el.description}</div>
