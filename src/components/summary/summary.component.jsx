@@ -4,7 +4,7 @@ const Summary = (props) => {
     return (
     <section id="summary">
         <h2>Executive Summary</h2>
-        <div class="paraContent">{props.summary}</div>
+        <div className="paraContent">{props.summary}</div>
     </section>
     )
 }

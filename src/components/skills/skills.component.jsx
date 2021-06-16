@@ -1,15 +1,15 @@
 import React from 'react';
 
 const Skills = (props) => {
-    const items = props.skills.map(el => {
+    const items = props.skills.map((el,index) => {
         return (
-        <li class="double">{el}</li>
+        <li key={index} className="double">{el}</li>
     )});
     
     return (
         <section>
             <h2><strong>Skills:</strong></h2>
-            <ul class="double">
+            <ul className="double">
                 {items}
             </ul>
         </section>
