@@ -7,6 +7,9 @@ import Skills from '../skills/skills.component';
 import Projects from '../projects/projects.component';
 import Experience from '../experience/experience.component';
 import PersonalProjects from '../personal-project/personal-project.component';
+import Certificates from '../certificates/certificates.component';
+import AcademicProjects from '../academic-projects/academic-projects.component';
+import Trainings from '../training/training.component';
 import Education from '../education/education.component';
 import firebase from 'firebase';
 
@@ -50,14 +53,17 @@ class Home extends React.Component {
 
         return (
             <section className="App" id="content">
-            { this.state.resume && <Header resume={this.state.resume} />}
-            { this.state.resume.objective && <Objective objective={this.state.resume.objective} />}
-            { this.state.resume.executiveSummary && <Summary summary={this.state.resume.executiveSummary} />}
-            { this.state.resume.skills && <Skills skills={this.state.resume.skills}/>}
-            {this.state.resume.projects && <Projects projects={this.state.resume.projects} />}
-            {this.state.resume.experience && <Experience experience={this.state.resume.experience} />}
-            {this.state.resume.personalProjects && <PersonalProjects personalProjects={this.state.resume.personalProjects} />}
-            {this.state.resume.education && <Education education={this.state.resume.education} />}
+            { this.state.resume && <Header resume={this.state.resume} /> }
+            { this.state.resume.objective && <Objective objective={this.state.resume.objective} /> }
+            { this.state.resume.executiveSummary && <Summary summary={this.state.resume.executiveSummary} /> }
+            { this.state.resume.skills && <Skills skills={this.state.resume.skills}/> }
+            { this.state.resume.experience && <Experience experience={this.state.resume.experience} />}
+            { this.state.resume.projects && <Projects projects={this.state.resume.projects} /> }
+            { this.state.resume.personalProjects && <PersonalProjects personalProjects={this.state.resume.personalProjects} /> }
+            { this.state.resume.academicProjects && <AcademicProjects academicProjects={this.state.resume.academicProjects} /> }
+            { this.state.resume.trainings && <Trainings trainings={this.state.resume.trainings} /> }
+            { this.state.resume.certificates && <Certificates certificates={this.state.resume.certificates} /> }
+            { this.state.resume.education && <Education education={this.state.resume.education} /> }
             </section>
         );
        

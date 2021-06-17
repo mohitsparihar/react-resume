@@ -6,18 +6,26 @@ const Projects = (props) => {
             <li>
                 <section>
                     <ul>
-                        <li>
+                        { el.title && <li>
                             <div class="label">Title:</div>
                             <div class="content">{el.title}</div>
-                        </li>
+                        </li>}
                         { el.technologies && <li>
                             <div class="label">Technologies:</div>
                             <div class="content">{el.technologies}</div>
                         </li>}
-                        <li>
+                        { el.name && <li>
+                            <div class="label">Name:</div>
+                            <div class="content">{el.name}</div>
+                        </li>}
+                        { el.url && <li>
+                            <div class="label">Url:</div>
+                            <div class="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                        </li>}
+                        { el.description && <li>
                             <div class="label">Description:</div>
                             <div class="content">{el.description}</div>
-                        </li> 
+                        </li>} 
                     </ul>
                 </section>
             </li>
