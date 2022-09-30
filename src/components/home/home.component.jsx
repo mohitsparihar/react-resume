@@ -11,7 +11,8 @@ import Certificates from '../certificates/certificates.component';
 import AcademicProjects from '../academic-projects/academic-projects.component';
 import Trainings from '../training/training.component';
 import Education from '../education/education.component';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 const Home = (props) => {
     const [resume, setResume] = useState(null)
