@@ -9,12 +9,7 @@ function Resume() {
   return <Home id={id}/>;
 }
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const App = () => {
     return (
       <Router>
         <div>
@@ -25,7 +20,6 @@ class App extends React.Component {
         </div>
       </Router>
     );
-  }
 };
 
 

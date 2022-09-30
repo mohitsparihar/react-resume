@@ -2,26 +2,26 @@ import React from 'react';
 
 const Experience = (props) => {
 
-    const items = props.experience.map(el => {
+    const items = props.experience.map((el, index) => {
         return (
-            <li>
+            <li key={"exp" + index}>
             <section>
                 <ul>
                     <li>
-                        <div class="label">Name:</div>
-                        <div class="content">{el.name}</div>
+                        <div className="label">Name:</div>
+                        <div className="content">{el.name}</div>
                     </li>
                     <li>
-                        <div class="label">Title:</div>
-                        <div class="content">{el.title}</div>
+                        <div className="label">Title:</div>
+                        <div className="content">{el.title}</div>
                     </li>
                     <li>
-                        <div class="label">Tenure:</div>
-                        <div class="content">{el.startDate} - {el.endDate}</div>
+                        <div className="label">Tenure:</div>
+                        <div className="content">{el.startDate} - {el.endDate}</div>
                     </li>
                     <li>
-                        <div class="label">Url:</div>
-                        <div class="content">{el.url}</div>
+                        <div className="label">Url:</div>
+                        <div className="content">{el.url}</div>
                     </li>
                 </ul>
             </section>

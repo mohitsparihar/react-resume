@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../../App.scss';
 import Header from '../header/header.component';
 import Objective from '../objective/objective.component';
@@ -13,15 +13,10 @@ import Trainings from '../training/training.component';
 import Education from '../education/education.component';
 import firebase from 'firebase';
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            resume: null
-        };
-    }
+const Home = (props) => {
+    const [resume, setResume] = useState(null)
 
-    componentDidMount() {
+    useEffect(() => {
         var firebaseConfig = {
             apiKey: "AIzaSyA_Uh9sk-bsskdlWryUqXxEEPKxcvQ9ZzA",
             authDomain: "resume-30e0a.firebaseapp.com",
@@ -29,7 +24,7 @@ class Home extends React.Component {
             storageBucket: "resume-30e0a.appspot.com",
             messagingSenderId: "404562103091",
             appId: "1:404562103091:web:289631f1154b83cf180c46"
-        };
+        }
 
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
@@ -37,15 +32,14 @@ class Home extends React.Component {
             firebase.app();
         }
 
-        firebase.database().ref(this.props.id || 'resume').once('value', (snap) => {
-            this.setState({
-                resume: snap.val()
-            })
+        firebase.database().ref(props.id || 'resume').once('value', (snap) => {
+            setResume(snap.val())
         });
-    }
+        
+        return setResume(null)
+    },[]);
 
-    render() {
-        if (!this.state.resume) {
+        if (!resume) {
             return (
                 <section></section>
             )
@@ -53,21 +47,20 @@ class Home extends React.Component {
 
         return (
             <section className="App" id="content">
-            { this.state.resume && <Header resume={this.state.resume} /> }
-            { this.state.resume.objective && <Objective objective={this.state.resume.objective} /> }
-            { this.state.resume.executiveSummary && <Summary summary={this.state.resume.executiveSummary} /> }
-            { this.state.resume.skills && <Skills skills={this.state.resume.skills}/> }
-            { this.state.resume.experience && <Experience experience={this.state.resume.experience} />}
-            { this.state.resume.projects && <Projects projects={this.state.resume.projects} /> }
-            { this.state.resume.personalProjects && <PersonalProjects personalProjects={this.state.resume.personalProjects} /> }
-            { this.state.resume.academicProjects && <AcademicProjects academicProjects={this.state.resume.academicProjects} /> }
-            { this.state.resume.trainings && <Trainings trainings={this.state.resume.trainings} /> }
-            { this.state.resume.certificates && <Certificates certificates={this.state.resume.certificates} /> }
-            { this.state.resume.education && <Education education={this.state.resume.education} /> }
+            { resume && <Header resume={resume} /> }
+            { resume.objective && <Objective objective={resume.objective} /> }
+            { resume.executiveSummary && <Summary summary={resume.executiveSummary} /> }
+            { resume.skills && <Skills skills={resume.skills}/> }
+            { resume.experience && <Experience experience={resume.experience} />}
+            { resume.projects && <Projects projects={resume.projects} /> }
+            { resume.personalProjects && <PersonalProjects personalProjects={resume.personalProjects} /> }
+            { resume.academicProjects && <AcademicProjects academicProjects={resume.academicProjects} /> }
+            { resume.trainings && <Trainings trainings={resume.trainings} /> }
+            { resume.certificates && <Certificates certificates={resume.certificates} /> }
+            { resume.education && <Education education={resume.education} /> }
             </section>
         );
        
-    }
 }
 
 export default Home;

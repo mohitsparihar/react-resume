@@ -1,22 +1,22 @@
 import React from 'react';
 
 const Trainings = (props) => {
-    const items = props.trainings.map(el => {
+    const items = props.trainings.map((el, index) => {
         return (
-            <li>
+            <li key={"Trainings" + index}>
                 <section>
                     <ul>
                         <li>
-                            <div class="label">Topic:</div>
-                            <div class="content">{el.topic}</div>
+                            <div className="label">Topic:</div>
+                            <div className="content">{el.topic}</div>
                         </li>
                         <li>
-                            <div class="label">Company:</div>
-                            <div class="content">{el.company}</div>
+                            <div className="label">Company:</div>
+                            <div className="content">{el.company}</div>
                         </li>
                         <li>
-                            <div class="label">Description:</div>
-                            <div class="content">{el.description}</div>
+                            <div className="label">Description:</div>
+                            <div className="content">{el.description}</div>
                         </li> 
                     </ul>
                     </section>

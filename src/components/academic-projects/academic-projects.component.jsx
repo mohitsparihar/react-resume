@@ -1,22 +1,22 @@
 import React from 'react';
 
 const AcademicProjects = (props) => {
-    const items = props.academicProjects.map(el => {
+    const items = props.academicProjects.map((el, index) => {
         return (
-            <li>
+            <li key={"AcademicProjects" + index}>
                 <section>
                     <ul>
                         <li>
-                            <div class="label">Title:</div>
-                            <div class="content">{el.title}</div>
+                            <div className="label">Title:</div>
+                            <div className="content">{el.title}</div>
                         </li>
                         { el.url && <li>
-                            <div class="label">Url:</div>
-                            <div class="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                            <div className="label">Url:</div>
+                            <div className="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
                         </li>}
                         <li>
-                            <div class="label">Description:</div>
-                            <div class="content">{el.description}</div>
+                            <div className="label">Description:</div>
+                            <div className="content">{el.description}</div>
                         </li> 
                     </ul>
                     </section>

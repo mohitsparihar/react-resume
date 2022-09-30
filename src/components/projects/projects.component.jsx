@@ -1,30 +1,30 @@
 import React from 'react';
 
 const Projects = (props) => {
-    const items = props.projects.map(el => {
+    const items = props.projects.map((el, index) => {
         return (
-            <li>
+            <li key={"project" + index}>
                 <section>
                     <ul>
                         { el.title && <li>
-                            <div class="label">Title:</div>
-                            <div class="content">{el.title}</div>
+                            <div className="label">Title:</div>
+                            <div className="content">{el.title}</div>
                         </li>}
                         { el.technologies && <li>
-                            <div class="label">Technologies:</div>
-                            <div class="content">{el.technologies}</div>
+                            <div className="label">Technologies:</div>
+                            <div className="content">{el.technologies}</div>
                         </li>}
                         { el.name && <li>
-                            <div class="label">Name:</div>
-                            <div class="content">{el.name}</div>
+                            <div className="label">Name:</div>
+                            <div className="content">{el.name}</div>
                         </li>}
                         { el.url && <li>
-                            <div class="label">Url:</div>
-                            <div class="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                            <div className="label">Url:</div>
+                            <div className="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
                         </li>}
                         { el.description && <li>
-                            <div class="label">Description:</div>
-                            <div class="content">{el.description}</div>
+                            <div className="label">Description:</div>
+                            <div className="content">{el.description}</div>
                         </li>} 
                     </ul>
                 </section>
