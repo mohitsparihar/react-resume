@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.3813d7bd.chunk.css",
-    "main.js": "./static/js/main.b4a142c8.chunk.js",
-    "main.js.map": "./static/js/main.b4a142c8.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.c8a6ae45.js",
-    "runtime-main.js.map": "./static/js/runtime-main.c8a6ae45.js.map",
-    "static/js/2.82941c76.chunk.js": "./static/js/2.82941c76.chunk.js",
-    "static/js/2.82941c76.chunk.js.map": "./static/js/2.82941c76.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.9a0ac248a5d4082703fdc30dfd814f88.js": "./precache-manifest.9a0ac248a5d4082703fdc30dfd814f88.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.3813d7bd.chunk.css.map": "./static/css/main.3813d7bd.chunk.css.map",
-    "static/js/2.82941c76.chunk.js.LICENSE.txt": "./static/js/2.82941c76.chunk.js.LICENSE.txt",
-    "static/media/gitlogo.png": "./static/media/gitlogo.3e54ed15.png",
-    "static/media/linkedinLogo.png": "./static/media/linkedinLogo.a08f59f4.png",
-    "static/media/mailLogo.png": "./static/media/mailLogo.3cb6597b.png",
-    "static/media/phoneLogo.png": "./static/media/phoneLogo.6927aab3.png"
+    "main.css": "/static/css/main.3813d7bd.chunk.css",
+    "main.js": "/static/js/main.b4a142c8.chunk.js",
+    "main.js.map": "/static/js/main.b4a142c8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f7de9edf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f7de9edf.js.map",
+    "static/js/2.33ed5f2f.chunk.js": "/static/js/2.33ed5f2f.chunk.js",
+    "static/js/2.33ed5f2f.chunk.js.map": "/static/js/2.33ed5f2f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.53bca9bb9d65675c53a574e964009528.js": "/precache-manifest.53bca9bb9d65675c53a574e964009528.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3813d7bd.chunk.css.map": "/static/css/main.3813d7bd.chunk.css.map",
+    "static/js/2.33ed5f2f.chunk.js.LICENSE.txt": "/static/js/2.33ed5f2f.chunk.js.LICENSE.txt",
+    "static/media/gitlogo.png": "/static/media/gitlogo.3e54ed15.png",
+    "static/media/linkedinLogo.png": "/static/media/linkedinLogo.a08f59f4.png",
+    "static/media/mailLogo.png": "/static/media/mailLogo.3cb6597b.png",
+    "static/media/phoneLogo.png": "/static/media/phoneLogo.6927aab3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c8a6ae45.js",
-    "static/js/2.82941c76.chunk.js",
+    "static/js/runtime-main.f7de9edf.js",
+    "static/js/2.33ed5f2f.chunk.js",
     "static/css/main.3813d7bd.chunk.css",
     "static/js/main.b4a142c8.chunk.js"
   ]
