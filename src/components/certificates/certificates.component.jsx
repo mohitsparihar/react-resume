@@ -12,7 +12,7 @@ const Certificates = (props) => {
                         </li>
                         <li>
                             <div className="label">Url:</div>
-                            <div className="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                            <div className="content"><a href={el.url} target="_blank" rel="noopener noreferrer">{el.url}</a></div>
                         </li>
                         <li>
                             <div className="label">Description:</div>

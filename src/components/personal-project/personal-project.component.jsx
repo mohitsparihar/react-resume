@@ -16,11 +16,11 @@ const PersonalProjects = (props) => {
                         </li> 
                         <li>
                             <div className="label">Code:</div>
-                            <div className="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                            <div className="content"><a href={el.url} target="_blank" rel="noopener noreferrer">{el.url}</a></div>
                         </li>
                         {el.demo && <li>
                             <div className="label">Demo:</div>
-                            <div className="content"><a href="{el.demo}" target="_blank">{el.url}</a></div>
+                            <div className="content"><a href={el.demo} target="_blank" rel="noopener noreferrer">{el.url}</a></div>
                         </li>}
                     </ul>
                     </section>

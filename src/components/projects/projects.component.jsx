@@ -20,7 +20,7 @@ const Projects = (props) => {
                         </li>}
                         { el.url && <li>
                             <div className="label">Url:</div>
-                            <div className="content"><a href="{el.url}" target="_blank">{el.url}</a></div>
+                            <div className="content"><a href={el.url} target="_blank" rel="noopener noreferrer">{el.url}</a></div>
                         </li>}
                         { el.description && <li>
                             <div className="label">Description:</div>
